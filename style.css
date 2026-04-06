@@ -335,10 +335,99 @@
         }
         
         @media (max-width: 480px) {
-            .container { padding: 1.3rem; }
-            #temp { font-size: 2.8rem; }
-            #cityName { font-size: 1.3rem; max-width: 65%; }
-            .info-value { font-size: 1rem; }
-            .suggestions-box div { padding: 10px 12px; font-size: 0.8rem; }
-            .suggestions-box div .location-marker { font-size: 0.9rem; width: 24px; }
-        }
+
+    body {
+        padding: 10px;
+        align-items: flex-start; /* 🔥 important */
+    }
+
+    .container {
+        padding: 1.2rem;
+        border-radius: 24px;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    .sub {
+        font-size: 0.7rem;
+        margin-bottom: 16px;
+    }
+
+    /* input */
+    #city {
+        padding: 12px 14px 12px 42px;
+        font-size: 0.9rem;
+    }
+
+    /* buttons */
+    button {
+        padding: 12px;
+        font-size: 0.9rem;
+    }
+
+    /* header */
+    .city-header {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #cityName {
+        font-size: 1.2rem;
+        max-width: 65%;
+    }
+
+    .weather-icon-large {
+        font-size: 2rem;
+    }
+
+    /* 🔥 BIG FIX */
+    .temp-main {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    #temp {
+        font-size: 2.4rem;
+    }
+
+    #desc {
+        font-size: 0.9rem;
+        padding: 4px 10px;
+    }
+
+    /* 🔥 MOST IMPORTANT */
+    .extra-grid {
+        grid-template-columns: 1fr;  /* STACK */
+        gap: 10px;
+    }
+
+    .info-card {
+        padding: 10px;
+    }
+
+    .info-value {
+        font-size: 1rem;
+    }
+
+    .footer-message {
+        font-size: 0.75rem;
+        padding: 8px;
+    }
+
+    .credit {
+        font-size: 0.65rem;
+    }
+
+    /* suggestions */
+    .suggestions-box {
+        border-radius: 16px;
+    }
+
+    .suggestions-box div {
+        padding: 10px 12px;
+        font-size: 0.8rem;
+    }
+}
