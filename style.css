@@ -1,4 +1,4 @@
-/* ===== SKYCAST ADVANCED CSS v2 (FIXED - Location Emojis/ICONS) ===== */
+/* ===== SKYCAST ADVANCED CSS v3 - FULLY RESPONSIVE ===== */
         * {
             margin: 0;
             padding: 0;
@@ -111,7 +111,7 @@
             box-shadow: 0 0 0 2px #FFB347, 0 4px 12px black;
         }
 
-        /* SUGGESTIONS - FIXED: Using emoji instead of Font Awesome for reliability */
+        /* SUGGESTIONS - Using emoji for reliability */
         .suggestions-box {
             position: absolute;
             top: calc(100% + 8px);
@@ -149,7 +149,6 @@
             overflow: visible;
             text-overflow: clip;
         }
-        /* FIXED: Use text-based location emoji instead of Font Awesome icons */
         .suggestions-box div .location-marker {
             font-size: 1.1rem;
             flex-shrink: 0;
@@ -334,100 +333,328 @@
             border-radius: 10px;
         }
         
+        /* ===== RESPONSIVE BREAKPOINTS FOR EVERY DEVICE ===== */
+        
+        /* Large Tablets (768px - 1024px) */
+        @media (max-width: 1024px) and (min-width: 769px) {
+            .container {
+                max-width: 480px;
+                padding: 1.6rem;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            #temp {
+                font-size: 3.2rem;
+            }
+            .extra-grid {
+                gap: 10px;
+            }
+        }
+        
+        /* Tablets & Small Laptops (481px - 768px) */
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+            .container {
+                max-width: 90%;
+                padding: 1.5rem;
+                border-radius: 36px;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            .sub {
+                font-size: 0.75rem;
+                margin-bottom: 20px;
+            }
+            #city {
+                padding: 13px 16px 13px 44px;
+                font-size: 0.95rem;
+            }
+            button {
+                padding: 12px;
+                font-size: 0.95rem;
+            }
+            .weather-box {
+                padding: 16px 14px;
+            }
+            #cityName {
+                font-size: 1.5rem;
+            }
+            .weather-icon-large {
+                font-size: 2.2rem;
+            }
+            #temp {
+                font-size: 3rem;
+            }
+            #desc {
+                font-size: 1rem;
+                padding: 5px 12px;
+            }
+            .info-card i {
+                font-size: 1.4rem;
+            }
+            .info-value {
+                font-size: 1.2rem;
+            }
+        }
+        
+        /* Mobile Large (426px - 480px) */
         @media (max-width: 480px) {
-
-    body {
-        padding: 10px;
-        align-items: flex-start; /* 🔥 important */
-    }
-
-    .container {
-        padding: 1.2rem;
-        border-radius: 24px;
-    }
-
-    h1 {
-        font-size: 1.6rem;
-    }
-
-    .sub {
-        font-size: 0.7rem;
-        margin-bottom: 16px;
-    }
-
-    /* input */
-    #city {
-        padding: 12px 14px 12px 42px;
-        font-size: 0.9rem;
-    }
-
-    /* buttons */
-    button {
-        padding: 12px;
-        font-size: 0.9rem;
-    }
-
-    /* header */
-    .city-header {
-        flex-direction: row;
-        align-items: center;
-    }
-
-    #cityName {
-        font-size: 1.2rem;
-        max-width: 65%;
-    }
-
-    .weather-icon-large {
-        font-size: 2rem;
-    }
-
-    /* 🔥 BIG FIX */
-    .temp-main {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
-    }
-
-    #temp {
-        font-size: 2.4rem;
-    }
-
-    #desc {
-        font-size: 0.9rem;
-        padding: 4px 10px;
-    }
-
-    /* 🔥 MOST IMPORTANT */
-    .extra-grid {
-        grid-template-columns: 1fr;  /* STACK */
-        gap: 10px;
-    }
-
-    .info-card {
-        padding: 10px;
-    }
-
-    .info-value {
-        font-size: 1rem;
-    }
-
-    .footer-message {
-        font-size: 0.75rem;
-        padding: 8px;
-    }
-
-    .credit {
-        font-size: 0.65rem;
-    }
-
-    /* suggestions */
-    .suggestions-box {
-        border-radius: 16px;
-    }
-
-    .suggestions-box div {
-        padding: 10px 12px;
-        font-size: 0.8rem;
-    }
-}
+            body {
+                padding: 12px;
+                align-items: flex-start;
+                padding-top: 20px;
+            }
+            .container {
+                padding: 1.2rem;
+                border-radius: 28px;
+            }
+            h1 {
+                font-size: 1.6rem;
+            }
+            h1 i {
+                font-size: 1.5rem;
+            }
+            .sub {
+                font-size: 0.7rem;
+                margin-bottom: 16px;
+            }
+            #city {
+                padding: 12px 14px 12px 42px;
+                font-size: 0.9rem;
+            }
+            .input-wrapper i {
+                left: 14px;
+                font-size: 0.9rem;
+            }
+            button {
+                padding: 11px;
+                font-size: 0.9rem;
+                min-height: 44px;
+            }
+            .weather-box {
+                margin-top: 20px;
+                padding: 14px 12px;
+                border-radius: 28px;
+            }
+            .city-header {
+                gap: 8px;
+                padding-bottom: 10px;
+            }
+            #cityName {
+                font-size: 1.2rem;
+                max-width: 65%;
+            }
+            .weather-icon-large {
+                font-size: 1.8rem;
+            }
+            .temp-main {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+                margin: 10px 0 4px 0;
+            }
+            #temp {
+                font-size: 2.4rem;
+                letter-spacing: -1px;
+            }
+            #desc {
+                font-size: 0.85rem;
+                padding: 4px 10px;
+            }
+            .extra-grid {
+                grid-template-columns: 1fr;
+                gap: 10px;
+                margin: 15px 0 8px;
+            }
+            .info-card {
+                padding: 10px 8px;
+                border-radius: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                text-align: left;
+                gap: 10px;
+            }
+            .info-card i {
+                font-size: 1.3rem;
+                margin-bottom: 0;
+                margin-left: 8px;
+            }
+            .info-card .info-label {
+                font-size: 0.65rem;
+                flex: 1;
+            }
+            .info-value {
+                font-size: 1rem;
+                margin-top: 0;
+                font-weight: 700;
+                margin-right: 8px;
+            }
+            .footer-message {
+                font-size: 0.7rem;
+                padding: 8px;
+                margin-top: 12px;
+            }
+            .credit {
+                font-size: 0.6rem;
+                margin-top: 14px;
+            }
+            .suggestions-box {
+                border-radius: 20px;
+                max-height: 220px;
+            }
+            .suggestions-box div {
+                padding: 10px 12px;
+                font-size: 0.8rem;
+            }
+            .suggestions-box div .location-marker {
+                font-size: 0.95rem;
+                width: 24px;
+            }
+        }
+        
+        /* Mobile Small (320px - 375px) */
+        @media (max-width: 375px) {
+            body {
+                padding: 8px;
+                padding-top: 16px;
+            }
+            .container {
+                padding: 1rem;
+                border-radius: 24px;
+            }
+            h1 {
+                font-size: 1.4rem;
+                gap: 8px;
+            }
+            h1 i {
+                font-size: 1.3rem;
+            }
+            .sub {
+                font-size: 0.65rem;
+                margin-bottom: 14px;
+            }
+            #city {
+                padding: 10px 12px 10px 38px;
+                font-size: 0.85rem;
+            }
+            .input-wrapper i {
+                left: 12px;
+                font-size: 0.8rem;
+            }
+            button {
+                padding: 10px;
+                font-size: 0.85rem;
+                min-height: 42px;
+            }
+            .weather-box {
+                padding: 12px 10px;
+                border-radius: 24px;
+            }
+            #cityName {
+                font-size: 1rem;
+            }
+            .weather-icon-large {
+                font-size: 1.5rem;
+            }
+            #temp {
+                font-size: 2rem;
+            }
+            #desc {
+                font-size: 0.75rem;
+                padding: 3px 8px;
+            }
+            .info-card {
+                padding: 8px 6px;
+            }
+            .info-card i {
+                font-size: 1.1rem;
+            }
+            .info-label {
+                font-size: 0.6rem;
+            }
+            .info-value {
+                font-size: 0.9rem;
+            }
+            .footer-message {
+                font-size: 0.65rem;
+                padding: 6px;
+            }
+            .credit {
+                font-size: 0.55rem;
+            }
+            .suggestions-box div {
+                padding: 8px 10px;
+                font-size: 0.75rem;
+                gap: 8px;
+            }
+        }
+        
+        /* Large Desktop (1200px+) */
+        @media (min-width: 1200px) {
+            .container {
+                max-width: 560px;
+                padding: 2rem;
+            }
+            h1 {
+                font-size: 2.5rem;
+            }
+            #temp {
+                font-size: 4rem;
+            }
+            .weather-icon-large {
+                font-size: 2.8rem;
+            }
+            .info-card i {
+                font-size: 1.8rem;
+            }
+            .info-value {
+                font-size: 1.4rem;
+            }
+        }
+        
+        /* Landscape orientation fix for mobile */
+        @media (max-width: 800px) and (orientation: landscape) {
+            body {
+                padding: 10px;
+                align-items: flex-start;
+            }
+            .container {
+                max-width: 95%;
+                padding: 1rem;
+            }
+            .weather-box {
+                margin-top: 15px;
+            }
+            .extra-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .temp-main {
+                flex-direction: row;
+                align-items: baseline;
+            }
+        }
+        
+        /* Dark mode / high contrast support */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background: radial-gradient(circle at 10% 30%, #0a1a25, #051018, #02080c);
+            }
+        }
+        
+        /* Reduced motion preference */
+        @media (prefers-reduced-motion: reduce) {
+            .suggestions-box.show {
+                animation: none;
+            }
+            button:active {
+                transform: none;
+            }
+            .suggestions-box div:hover {
+                transform: none;
+            }
+        }
