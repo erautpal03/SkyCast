@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <!-- Mobile responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO (small upgrade) -->
+    <meta name="description" content="SkyCast - Real-time global weather app with smart search and live location">
+
+    <title>SkyCast – Live Weather</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<main class="container">  <!-- semantic upgrade -->
+
+    <h1>
+        <i class="fas fa-cloud-moon"></i> 
+        SkyCast
+    </h1>
+
+    <div class="sub">
+        <i class="fas fa-satellite-dish"></i> real-time · global weather intelligence
+    </div>
+
+    <div class="search-area">
+
+        <div class="input-wrapper">
+            <i class="fas fa-map-pin"></i>
+
+            <input 
+                type="text" 
+                id="city" 
+                placeholder="Search city... e.g., London, Tokyo, Mumbai" 
+                autocomplete="off"
+                aria-label="Search city weather"
+            >
+
+            <div id="suggestionsDropdown" class="suggestions-box"></div>
+        </div>
+
+        <!-- ✅ FIX: type="button" -->
+        <button id="searchBtn" type="button">
+            <i class="fas fa-search"></i> Search
+        </button>
+
+        <!-- ✅ FIX: type="button" -->
+        <button id="locationBtn" class="location-btn" type="button">
+            <i class="fas fa-location-dot"></i> Use my location
+        </button>
+
+    </div>
+
+    <div class="weather-box" id="weatherBox">
+
+        <div class="city-header">
+            <span id="cityName">—</span>
+            
+            <!-- ✅ cleaner emoji -->
+            <span id="weatherEmoji" class="weather-icon-large">🌍</span>
+        </div>
+
+        <div class="temp-main">
+            <span id="temp">--°C</span>
+            <span id="desc">awaiting data</span>
+        </div>
+
+        <div class="extra-grid" id="extraGrid">
+            <div class="info-card">
+                <i class="fas fa-thermometer-half"></i>
+                <div class="info-label">Feels Like</div>
+                <div class="info-value" id="feelsLike">--°C</div>
+            </div>
+
+            <div class="info-card">
+                <i class="fas fa-tint"></i>
+                <div class="info-label">Humidity</div>
+                <div class="info-value" id="humidity">--%</div>
+            </div>
+
+            <div class="info-card">
+                <i class="fas fa-wind"></i>
+                <div class="info-label">Wind</div>
+                <div class="info-value" id="wind">-- km/h</div>
+            </div>
+
+            <div class="info-card">
+                <i class="fas fa-eye"></i>
+                <div class="info-label">Visibility</div>
+                <div class="info-value" id="visibility">-- km</div>
+            </div>
+        </div>
+
+        <div id="extra" class="footer-message">
+            <i class="fas fa-cloud-sun"></i> 
+            <span>Ready — search any city</span>
+        </div>
+
+    </div>
+
+    <div class="credit">
+        • Developed by Era Utpal
+    </div>
+
+</main>
+
+<script src="script.js" defer></script>
+</body>
+</html>
